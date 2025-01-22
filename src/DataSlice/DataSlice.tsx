@@ -79,12 +79,15 @@ export const dataSlice = createSlice({
       const price = action.payload;
       if (price === 'CHEAP') {
         state.priceFilter = 'CHEAP';
+        state.visibleTicketsCount = 5;
       }
       if (price === 'FAST') {
         state.priceFilter = 'FAST';
+        state.visibleTicketsCount = 5;
       }
       if (price === 'OPTIMAL') {
         state.priceFilter = 'OPTIMAL';
+        state.visibleTicketsCount = 5;
       }
     },
   },
