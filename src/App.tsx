@@ -35,9 +35,6 @@ export function App() {
     <div className={classNames(styles.ticket_list_conteiner)}>
       <CheckboxesGroup />
 
-      {/* Фильтры */}
-
-      {/* Рейсы */}
       <div className={classNames(styles.ticket_list)}>
         <>
           <ButtonsGroup />

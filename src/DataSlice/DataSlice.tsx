@@ -22,13 +22,10 @@ export const getTickets = createAsyncThunk(
         return response.data;
       }
 
-    
-        dispatch(getTickets(searchId));
-    
+      dispatch(getTickets(searchId));
 
       return response.data;
     } catch (error) {
-      // Сужение типа для error
       if (axios.isAxiosError(error)) {
         if (error.response?.status === 500) {
           console.warn('Ошибка 500. Повторяем запрос.');
@@ -41,13 +38,11 @@ export const getTickets = createAsyncThunk(
         return rejectWithValue(error.message || 'Неизвестная ошибка');
       }
 
-      // Обработка ошибок, которые не являются AxiosError
       return rejectWithValue(error instanceof Error ? error.message : 'Неизвестная ошибка');
     }
   }
 );
 
-// Начальное состояние
 const initialState: DataState = {
   searchId: '',
   tickets: [],
