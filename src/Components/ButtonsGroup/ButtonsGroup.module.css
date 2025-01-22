@@ -1,0 +1,28 @@
+.button_group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 50px;
+}
+
+.button_active {
+  font-size: 12px;
+  background-color: #2196f3;
+  border: 1px solid #2196f3;
+  color: white;
+}
+
+.button_fltr {
+  font-size: 12px;
+  background-color: #ffffff;
+  border: 1px solid #dfe5ec;
+}
+
+.button_active:first-child,
+.button_fltr:first-child {
+  border-radius: 7px 0 0 7px;
+}
+
+.button_active:last-child,
+.button_fltr:last-child {
+  border-radius: 0 7px 7px 0;
+}

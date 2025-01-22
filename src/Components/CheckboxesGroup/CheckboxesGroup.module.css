@@ -1,0 +1,30 @@
+.checkbox_list {
+  width: 232px;
+  height: 252px;
+  background-color: #ffffff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+}
+
+.check__input {
+  appearance: none;
+}
+
+.check__box {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../Img/Unchecked.svg);
+}
+
+.check_box_checked {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../Img/Checked.svg);
+}
