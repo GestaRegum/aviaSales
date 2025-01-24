@@ -15,7 +15,7 @@
 }
 
 .overflow {
-  height: 600px;
+  height: 60vh;
   overflow: auto;
   display: grid;
   gap: 20px;
