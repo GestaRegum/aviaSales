@@ -39,7 +39,7 @@ export const CheckboxesGroup = () => {
       <p> Количество пересадок</p>
       {CHECKBOXES.map((checkbox) => (
         <div key={checkbox.filterCheckbox}>
-          <label className={classNames(styles.check)}>
+          <label className={classNames(styles.check)}> 
             <span
               className={classNames(
                 selectedFilters.includes(checkbox.filterCheckbox) ? styles.check_box_checked : styles.check__box

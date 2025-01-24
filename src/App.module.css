@@ -18,11 +18,6 @@
   row-gap: 20px;
 }
 
-.button_groups {
-  display: grid;
-  gap: 20px;
-}
-
 .ticket_no {
   width: 502px;
   font-size: 18px;

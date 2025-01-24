@@ -6,7 +6,8 @@ export const useFilteredTickets = () => {
   const { tickets, filters } = useSelector((state: RootState) => state.data);
 
   const filteredTickets = tickets.filter((ticket: Ticket) => {
-    const stopsCount = ticket.segments[0].stops.length;
+    const stopsCountFirst = ticket.segments[0].stops.length;
+    const stopsCountSecond = ticket.segments[1].stops.length;
 
     const filtersMap: Record<FilterCheckbox, number | string> = {
       ALL: 'ALL',
@@ -17,7 +18,11 @@ export const useFilteredTickets = () => {
 
     return (
       filters.includes(FILTER_CHECKBOXES.ALL) ||
-      filters.some((filter) => filtersMap[filter as FilterCheckbox] === stopsCount)
+      filters.some(
+        (filter) =>
+          filtersMap[filter as FilterCheckbox] === stopsCountFirst &&
+          filtersMap[filter as FilterCheckbox] === stopsCountSecond
+      )
     );
   });
 
