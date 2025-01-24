@@ -39,19 +39,20 @@ export function App() {
         <ButtonsGroup />
 
         {loading ? <Spin /> : null}
-
-        {filteredTickets.length === 0 ? (
-          <div className={classNames(styles.ticket_no)}>
-            Рейсов, подходящих под заданные фильтры, не найдено
-            <Empty />
-          </div>
-        ) : (
-          visibleTickets.map((ticket: Ticket) => (
-            <div key={ticket.segments[0].date + ticket.segments[1].date}>
-              <TicketCard ticket={ticket} />
+        <div className={classNames(styles.overflow)}>
+          {filteredTickets.length === 0 ? (
+            <div className={classNames(styles.ticket_no)}>
+              Рейсов, подходящих под заданные фильтры, не найдено
+              <Empty />
             </div>
-          ))
-        )}
+          ) : (
+            visibleTickets.map((ticket: Ticket) => (
+              <div key={ticket.segments[0].date + ticket.segments[1].date}>
+                <TicketCard ticket={ticket} />
+              </div>
+            ))
+          )}
+        </div>
 
         {visibleTickets.length < filteredTickets.length ? <ButtonShowMoreTickets /> : null}
       </div>

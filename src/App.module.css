@@ -12,8 +12,13 @@
 .ticket_list {
   display: grid;
   gap: 20px;
-  height: 700px;
+}
+
+.overflow {
+  height: 600px;
   overflow: auto;
+  display: grid;
+  gap: 20px;
 }
 
 .ticket_list_conteiner {
